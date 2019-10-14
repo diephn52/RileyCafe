@@ -1,0 +1,67 @@
+/*  Intro part  */
+.intro{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    @extend %CSSFlexRow;
+	margin-bottom: 100px; 
+	&__left{
+		padding-right: 15px;
+		&:hover &--img{
+			transform: scale(.95);
+			transition: all .8s linear -.5s;
+		}
+		&--text{
+			position: absolute;
+			color: $color-white;
+			transform: translate3d(20%,-140%,0);
+
+			&--link{
+				@extend %CSSLinkBtn;
+				&:hover{
+					@extend %CSSLinkBtnHover;
+				}
+			}
+		}
+	}
+	&__right{
+		padding-left: 15px;
+		&--above{
+			padding-bottom: 15px;
+			&:hover &--img{
+				transform: scale(.95);
+				transition: all .8s linear -.5s;
+			}
+			&--text{
+				position: absolute;
+				color: $color-white;
+				transform: translate3d(25%,-300%,0);
+				& span{					
+					border-radius: 50%;
+					padding: 15px 10px;
+					background-color: $color-yellow;
+					font-size: 70%;
+				}
+			}
+		}
+		&--below{
+			padding-top: 10px;
+			&:hover &--img{
+				transform: scale(.95);
+				transition:  all .8s linear -.5s;
+			}
+			&--text{
+				position: absolute;
+				color: $color-white;
+				transform: translate3d(20%,-140%,0);
+
+				&--link{
+					@extend %CSSLinkBtn;
+					&:hover{
+						@extend %CSSLinkBtnHover;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.menu-plus{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 70%;
+    @extend %CSSFlexRow;
+    &__description{
+        border-radius: 10px;
+        padding-left: 30px;
+        width: 50%;
+        height: 440px;
+        background-color: $color-brown-light;
+        &--text{
+            & h2{
+                color: $color-white;
+                font-size: 2.2rem;
+                margin-bottom: 0;
+            }
+            & h3{
+                color: $color-white;
+                font-size: 2.2rem;
+                font-weight: 300;
+                margin: 0;
+            }
+            & p{
+                width: 60%;
+                @extend %CSStext;
+                text-overflow: visible;
+            }
+            
+        }
+        &--wrap{
+            @extend %CSSFlexRow;
+            justify-content: space-between;
+            &--link{
+                width: 25%;
+                @extend %CSSLinkBtn;
+                &:hover{
+                    @extend %CSSLinkBtnHover;
+                }
+            }
+            &--img{
+                width: 50%;
+            }
+        }        
+    }
+    &__slide{
+        width: 40%;
+        height: auto;
+        &--wrap{
+            transform: translateY(-30px);
+            width: auto;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+            &--item{
+                width: auto;
+                height: 100%;
+                &:hover{
+                    transform: scale(.95);
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+    
+}

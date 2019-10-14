@@ -1,0 +1,14 @@
+.fixedNavbar{
+  position: sticky;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  background-color: $color-brown;
+  z-index: 3;
+  transition: all .3s;
+}
+.active{
+	background-color: $color-yellow;
+}

@@ -1,0 +1,57 @@
+// Extends SASS
+%CSSFlexRow{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+%CSSFlexColumn{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: column wrap; /* Safari 6.1+ */
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+%CSSNavbar{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;   
+}
+%CSSNavTitle{
+	text-decoration: none;
+	word-spacing: 1px;
+	letter-spacing: .5px;
+	padding: 10px;
+	text-align: center;
+}
+%CSStext{
+	color: $color-white;
+	font-size: 1rem;
+	word-spacing: 1.5px;
+	letter-spacing: 1.2px;
+	font-weight: 400;
+}
+%CSSHoverNavbar{
+	color: $color-yellow;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+}
+%CSSLinkBtn{
+	text-decoration: none;
+	font-size: 1rem;
+	color: $color-white;
+	border: 2px solid $color-white;
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	padding: 8px 50px;
+}
+%CSSLinkBtnHover{
+	background-color: $color-yellow;
+	border: 2px solid $color-yellow;
+	transition: all .5s ease;	
+}

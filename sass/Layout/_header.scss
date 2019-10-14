@@ -1,0 +1,187 @@
+.header{
+	background: url(../img/R-background.jpg) center center no-repeat;
+	margin-bottom: 100px;
+    &__navbar{
+        @extend %CSSNavbar;
+        z-index: 2;
+        @extend %CSSFlexRow;
+		&--title{ // Tag a
+            @extend %CSSNavTitle;
+            color: $color-white;
+            font-weight: 700;
+			&:hover{
+				@extend %CSSHoverNavbar;
+			}
+		}
+		&--dropdown{
+			position: relative;
+			&:hover &--content{
+				@extend %CSSFlexColumn;
+			}
+			&--title{
+				& a{
+                    @extend %CSSNavTitle;
+                    color: $color-white;
+				}
+				& a:hover{				
+					@extend %CSSHoverNavbar;					
+				}
+			}
+			&--content{
+				display: none;
+				position: absolute;
+				background-color: $color-brown;
+				min-width: 160px;
+				min-height: 130px;
+				box-shadow: 0px 8px 16px 0px rgba($color-black,0.2);
+				margin-top: 10px;
+				border-radius: 15px;				
+				& a{
+                    @extend %CSSNavTitle;
+                    color: $color-white;
+					font-size: 80%;
+					&:hover{
+						color: $color-yellow;
+					}
+				}
+			}
+		}
+    }
+    &__line{
+        border-bottom: 1px solid $color-grey-light;
+    }
+	/*  Menu header   */
+	&__menu{
+		@extend %CSSNavbar;
+		@extend %CSSFlexRow;
+		margin-bottom: 50px;
+        z-index: 1;
+		&--title{
+            @extend %CSSNavTitle;  
+			color: $color-yellow-light;			
+			&:hover{
+				color: $color-white;
+				transform: rotate(25deg);
+				-webkit-transform: rotate(25deg);
+				transition: all .5s;
+				-webkit-transition: all .5s;
+			}
+		}  
+		& img{
+			padding-right: 20px;
+		}
+	}
+	
+	/*  Slide banner  */
+	&__slide{
+		position: relative;	
+		width: 93%;
+		margin: 0 auto;
+		&--arrow{
+			position: absolute;
+			cursor: pointer;
+			top: 50%;
+			margin-top: -35px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+		&--banner{
+			@extend %CSSFlexRow;
+			text-align: center;
+			animation: bannerFall 5s ease;
+			-webkit-animation: bannerFall 5s ease;
+			opacity: 0;		
+			overflow: hidden;		
+			& div{
+                width: calc(100%/3);
+
+			}
+			&--img{
+				max-width: 80%;
+				height: auto;
+			}
+			&--text{
+				align-self: flex-start;
+				line-height: .7;
+			}
+			&--text h2{
+				color: $color-white;
+				font-weight: 700;
+				font-size: 2.1rem;
+				word-spacing: 1px;
+				letter-spacing: 1px;
+			}
+			&--text h5{
+				color: $color-white;
+				font-weight: 400;
+				font-size: 1.4rem;
+				word-spacing: 1px;
+				letter-spacing: 1px;
+			}
+			&--text h3{
+				color: $color-yellow-light;
+				font-weight: 400;
+				font-size: 2.6rem;
+				word-spacing: 1.2px;
+				letter-spacing: 1.2px;
+			}
+			&--text h2::before{
+				content: "";
+				position: absolute;
+				background: $color-white;
+				width: 100px;
+				height: 2px;
+                margin-left: -7%;
+                margin-top: 10px;				
+			}
+			&--text h2::after{
+				content: "";
+				position: absolute;
+				background: $color-white;
+				width: 100px;
+				height: 2px;
+				margin-left: 1%;
+				margin-top: 10px;
+			}
+		}
+		&--dots {
+			text-align: center;
+			&--dot{
+				height: 7px;
+				width: 25px;
+				margin: 0 2px;
+				background-color: $color-white;
+				border-radius: 10%;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+			}
+			
+		}
+	}
+}
+.active{
+	background-color: rgba($color-yellow,.1);
+	color: $color-yellow;
+}
+.actived{
+	background-color: $color-yellow;
+}
+// CSS Cart shopping
+#cart{
+	border: 1px solid $color-grey-light;
+	width: 200px;
+	height: 25px;
+	border-radius: 25px;
+	
+}
+#cart span{
+	padding-right: 10px;
+	padding: 5px;
+}
+#cart:hover{
+	background-color: $color-yellow;
+	border: 1px solid $color-yellow-light;
+	color: $color-white;
+	@extend %CSSHoverNavbar;
+}

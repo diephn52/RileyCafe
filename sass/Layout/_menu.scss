@@ -1,0 +1,111 @@
+// Menu list
+.menu{
+    position: relative;
+	@extend %CSSFlexColumn;
+	background: url(../img/R-background-Menu.jpg) no-repeat fixed center ;
+	margin-bottom: 100px;
+	padding: 50px 0px;
+	// Title
+	&__title{
+		text-align: center;
+		& h2{
+			color: $color-yellow;
+			font-size: 2.6rem;
+			margin-bottom: 0;
+		}
+		& p{
+			@extend %CSStext;
+		}
+	}
+	// Content
+	&__content{
+		@extend %CSSFlexRow;
+		padding: 40px 0;
+		width: 90%;
+		margin: auto;
+		&--left{
+			@extend %CSSFlexColumn;
+			padding-right: 15px;
+			width: 35%;			
+			&--part{
+				@extend %CSSFlexRow;
+                justify-content: space-between;
+				&--img{
+					& img{
+						width: 100px;
+						height: auto;
+						&:hover{
+							transform: scale(.9);
+							transition: all .7s ease;
+						}
+					}
+				}
+				&--text{
+					width: 75%;
+					& h2{
+						color: $color-yellow;
+						border-bottom: 2px dashed $color-white;						
+						height: 50px;
+						font-size: 1.2rem;
+						font-weight: 700;
+						@extend %CSSFlexRow;
+						justify-content: space-between;
+					}
+				
+					& p{
+						@extend %CSStext;
+					}
+				}
+			}
+		}
+		&--right{
+			@extend %CSSFlexColumn;
+			padding-left: 15px;
+			width: 35%;
+
+			&--part{
+				@extend %CSSFlexRow;
+				justify-content: space-between;
+				&--img{
+					& img{
+						width: 100px;
+						height: auto;
+						&:hover{
+							transform: scale(.9);
+							transition: all .7s ease;
+						}
+					}					
+				}
+				&--text{
+					width: 75%;
+					& h2{
+						color: $color-yellow;
+						border-bottom: 2px dashed $color-white;
+						height: 50px;
+						font-size: 1.2rem;
+						font-weight: 700;
+						@extend %CSSFlexRow;
+						justify-content: space-between;
+					}
+					& p{
+						@extend %CSStext;
+					}
+				}
+			}			
+		}
+	}
+	// Menu button detail
+	&__button{
+		&--link{
+			@extend %CSSLinkBtn;
+			color: $color-yellow;		
+			border: 2px solid $color-yellow-light;		
+			&:hover{
+				background-color: $color-yellow;
+				border: 2px solid $color-yellow;
+				transition: all .5s ease;
+				color: $color-white;
+			}
+		}
+	}
+}
